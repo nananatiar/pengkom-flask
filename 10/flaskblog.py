@@ -167,7 +167,7 @@ def user_posts(username):
 
 def send_reset_email(user):
     token = user.get_reset_token()
-    msg = Message('Permintaan Request Password', sender='fannan.spensaku@gmail.com', recipients=[user.email])
+    msg = Message('Permintaan Request Password', sender='noreply@demo.com', recipients=[user.email])
     msg.body = f''' Untuk mereset password anda berikut adalah link yang digunakan :
 {url_for('reset_token', token=token, _external=True)}
 
